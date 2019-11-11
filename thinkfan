@@ -1,0 +1,16 @@
+#!/bin/rc
+
+fn usage {
+	echo usage: thinkfan [0-7]
+	exit usage
+}
+
+switch($#*){
+case 0
+	io -Er 0x2f | sed 's/0x//'
+case 1
+	~ $1 [0-7] || usage
+	io -Ew 0x2f $1
+case *
+	usage
+}
