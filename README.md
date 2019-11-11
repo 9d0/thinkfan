@@ -8,4 +8,4 @@ I have successfully tested this program on Lenovo ThinkPad models X220 and X230.
 ## Installation
 `cp thinkfan /rc/bin/`
 
-`echo thinkfan 1 >/cfg/$sysname/termrc`
+`echo thinkfan 1 >>/cfg/$sysname/termrc`
